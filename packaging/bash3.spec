@@ -1,4 +1,6 @@
-Version: 3.2.0
+%define patchleveltag 57
+
+Version: 3.2.%{patchleveltag}
 Name: bash3
 Summary: The GNU Bourne Again shell
 Release: 1
@@ -8,6 +10,66 @@ License: GPLv2+
 Url: http://www.gnu.org/software/bash
 Source0: ftp://ftp.gnu.org/gnu/bash/%{name}-%{version}.tar.gz
 Source1001:    %{name}.manifest
+
+# Official upstream patches
+Patch1: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-001
+Patch2: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-002
+Patch3: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-003
+Patch4: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-004
+Patch5: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-005
+Patch6: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-006
+Patch7: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-007
+Patch8: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-008
+Patch9: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-009
+Patch10: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-010
+Patch11: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-011
+Patch12: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-012
+Patch13: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-013
+Patch14: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-014
+Patch15: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-015
+Patch16: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-016
+Patch17: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-017
+Patch18: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-018
+Patch19: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-019
+Patch20: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-020
+Patch21: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-021
+Patch22: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-022
+Patch23: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-023
+Patch24: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-024
+Patch25: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-025
+Patch26: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-026
+Patch27: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-027
+Patch28: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-028
+Patch29: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-029
+Patch30: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-030
+Patch31: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-031
+Patch32: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-032
+Patch33: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-033
+Patch34: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-034
+Patch35: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-035
+Patch36: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-036
+Patch37: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-037
+Patch38: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-038
+Patch39: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-039
+Patch40: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-040
+Patch41: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-041
+Patch42: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-042
+Patch43: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-043
+Patch44: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-044
+Patch45: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-045
+Patch46: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-046
+Patch47: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-047
+Patch48: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-048
+Patch49: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-049
+Patch50: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-050
+Patch51: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-051
+Patch52: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-052
+Patch53: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-053
+Patch54: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-054
+Patch55: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-055
+Patch56: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-056
+Patch57: ftp://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-057
+
 Provides: bash
 
 BuildRequires: bison
@@ -31,6 +93,64 @@ This package contains documentation files for %{name}.
 
 %prep
 %setup -q
+# Official upstream patches
+%patch1 -p0 -b .001
+%patch2 -p0 -b .002
+%patch3 -p0 -b .003
+%patch4 -p0 -b .004
+%patch5 -p0 -b .005
+%patch6 -p0 -b .006
+%patch7 -p0 -b .007
+%patch8 -p0 -b .008
+%patch9 -p0 -b .009
+%patch10 -p0 -b .010
+%patch11 -p0 -b .011
+%patch12 -p0 -b .012
+%patch13 -p0 -b .013
+%patch14 -p0 -b .014
+%patch15 -p0 -b .015
+%patch16 -p0 -b .016
+%patch17 -p0 -b .017
+%patch18 -p0 -b .018
+%patch19 -p0 -b .019
+%patch20 -p0 -b .020
+%patch21 -p0 -b .021
+%patch22 -p0 -b .022
+%patch23 -p0 -b .023
+%patch24 -p0 -b .024
+%patch25 -p0 -b .025
+%patch26 -p0 -b .026
+%patch27 -p0 -b .027
+%patch28 -p0 -b .028
+%patch29 -p0 -b .029
+%patch30 -p0 -b .030
+%patch31 -p0 -b .031
+%patch32 -p0 -b .032
+%patch33 -p0 -b .033
+%patch34 -p0 -b .034
+%patch35 -p0 -b .035
+%patch36 -p0 -b .036
+%patch37 -p0 -b .037
+%patch38 -p0 -b .038
+%patch39 -p0 -b .039
+%patch40 -p0 -b .040
+%patch41 -p0 -b .041
+%patch42 -p0 -b .042
+%patch43 -p0 -b .043
+%patch44 -p0 -b .044
+%patch45 -p0 -b .045
+%patch46 -p0 -b .046
+%patch47 -p0 -b .047
+%patch48 -p0 -b .048
+%patch49 -p0 -b .049
+%patch50 -p0 -b .050
+%patch51 -p0 -b .051
+%patch52 -p0 -b .052
+%patch53 -p0 -b .053
+%patch54 -p0 -b .054
+%patch55 -p0 -b .055
+%patch56 -p0 -b .056
+%patch57 -p0 -b .057
 
 %build
 cp %{SOURCE1001} .
