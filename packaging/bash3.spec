@@ -6,7 +6,7 @@ Summary: The GNU Bourne Again shell
 Release: 1
 VCS:     external/bash#bash_4.1-slp2+s3_1-3-g35a92deccc2ab499763d1656732b42d8c433f659
 Group: System/Shells
-License: GPL-2.0+
+License: GPLv2+
 Url: http://www.gnu.org/software/bash
 Source0: ftp://ftp.gnu.org/gnu/bash/%{name}-%{version}.tar.gz
 Source1001:    %{name}.manifest
